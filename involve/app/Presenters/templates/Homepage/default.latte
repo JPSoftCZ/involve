@@ -1,0 +1,62 @@
+{block content}
+	<div class="split left">
+		<center>
+			<h1>Uživatelé</h1>
+			<button style="width: 100px; height: 40px; border: none; outline: none"><a n:href="User:addUser">Nový uživatel</a></button>
+
+			<div style="margin-top: 20px">
+				<table>
+					<tr>
+						<th>ID </th>
+						<th>Jméno </th>
+						<th>Příjmení </th>
+						<th>Typ </th>
+					</tr>
+					<tr n:foreach="$users as $us">
+						<td>{$us->id}</td>
+						<td>{$us->jmeno}</td>
+						<td>{$us->prijmeni}</td>
+						<td>{$us->typ}</td>
+					</tr>
+				</table>
+			</div>
+		</center>
+	</div>
+
+	<div class="split right">
+		<center>
+			<h1>Týmy</h1>
+			<button style="width: 100px; height: 40px; border: none; outline: none"><a n:href="Team:addTeam">Nový tým</a></button>
+			<div style="margin-top: 20px">
+				<table>
+					<tr>
+						<th>ID </th>
+						<th>Název týmu </th>
+						<th>Závodníci</th>
+						<th>Spolujezdci</th>
+						<th>Technici</th>
+						<th>Manažer</th>
+						<tH>Fotograf</tH>
+					</tr>
+					<tr n:foreach="$teams as $te">
+						<td>{$te->id}</td>
+						<td>{$te->teamName}</td>
+						<td>{$te->zavodnik1} <br> {$te->zavodnik2} <br>{$te->zavodnik3}</td>
+						<td>{$te->spolujezdec1} <br> {$te->spolujezdec2} <br>{$te->spolujezdec3}</td>
+						<td>{$te->technik1}<br> {$te->technik2}</td>
+						<td>{$te->manazer}</td>
+						<td>{$te->fotograf}</td>
+
+					</tr>
+				</table>
+			</div>
+		</center>
+	</div>
+
+<center>
+
+
+
+
+</center>
+{/block}
